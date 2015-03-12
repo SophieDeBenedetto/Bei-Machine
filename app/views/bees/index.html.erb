@@ -1,0 +1,5 @@
+<h1>Companies to investigate:</h2>
+  <% @bees.each do |bee|  %>
+  <li><a href="<%= bee.link %>"><%= bee.result_item %></a></li>
+  <%end%>
+  

@@ -1,0 +1,7 @@
+<h1>What do you want to search for today, Bee?</h1>
+<%= form_tag("/bees") do %>
+  <%= label_tag('bee[terms]', "Terms") %>
+  <%= text_field_tag('bee[terms]') %>
+
+  <%= submit_tag "Search" %>
+<% end %>
