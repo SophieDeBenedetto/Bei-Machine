@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def login_required
     if !logged_in?
-      flash[:notice] = "Log in to edit or delete your Post"
+      flash[:notice] = "Log in to search"
       redirect_to root_path
     end
   end

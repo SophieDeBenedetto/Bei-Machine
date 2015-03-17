@@ -14,7 +14,6 @@ class BeesController < ApplicationController
     end
 
     @findings.found_item(bee_params).each_with_index do |found, i|
-      #binding.pry
       array[i].result_item= found
       array[i].save
     end
