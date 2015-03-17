@@ -1,4 +1,6 @@
 require 'open-uri'
+require 'cgi'
+
 class BeeScraper
 
   # def call

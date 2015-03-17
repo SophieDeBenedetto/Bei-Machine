@@ -32,12 +32,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-require 'nokogiri'
-require 'open-uri'
-require 'cgi'
-require 'pry'
+gem 'nokogiri'
 
 group :development, :test do
+  gem 'pry'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
