@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  root 'sessions#new'
+  get '/search' => 'welcome#index'
   resources :bees
+  resources :users, :except => ["new"]
+  get '/signup' => 'users#new', :as => 'signup'
+
+  get '/myresults' => 'users#my_results'
+  get 'login' => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
+  post 'sessions' => 'sessions#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
