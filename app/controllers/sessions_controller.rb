@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       login(@user)
       redirect_to search_path
     else
-      flash.now.alert = "Invalid email or password"
+      flash.now[:notice] = "Please use a valid email/password"
       render "new"
     end
   end
