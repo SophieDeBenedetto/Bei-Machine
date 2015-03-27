@@ -11,15 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317143900) do
+ActiveRecord::Schema.define(version: 20150327015639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bees", force: :cascade do |t|
-    t.string  "result_item"
-    t.string  "link"
-    t.integer "user_id"
+    t.string   "result_item"
+    t.string   "link"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.text     "notes"
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string   "keyword_terms"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "bee_id"
   end
 
   create_table "users", force: :cascade do |t|

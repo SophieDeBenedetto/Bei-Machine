@@ -1,5 +1,34 @@
 <h1>Your Results:</h2>
+
+  <table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Result</th>
+      <th>Keywords</th>
+      <th></th>
+      <th></th>
+
+    </tr>
+  </thead>
+  <tbody>
   <% @results.each do |result|  %>
-  <li><a href="<%= result.link %>"><%= result.result_item %></a></li>
+    <tr class="success">
+      <td><%=result.created_at.to_date%></td>
+      <td><a href="<%= result.link %>"><%= result.result_item %></a></td>
+      <td><%= result.keyword.keyword_terms%></td>
+      <td><button class="btn btn-info btn-xs notes-btn"id="btn-<%=result.id%>">notes</button></td>
+      <td><button class="btn btn-info btn-xs">delete</button></td>
+    </tr>
+    <tr>
+      <td colspan="5"  id="notes-<%=result.id%>" class="hidden_notes">
+        <%=form_for result do |f|%>
+        <%= f.text_area :notes, :col => 50, :rows => 5, :class =>"notes_text"%>
+        <%= f.submit "save", class: "btn btn-info btn-xs", id: "save-notes-btn"%>
+        <%end%>
+      </td>
+    </tr>
   <%end%>
+  </tbody>
+</table>
   

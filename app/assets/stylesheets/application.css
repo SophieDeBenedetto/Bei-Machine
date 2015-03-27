@@ -38,3 +38,23 @@ body li {
   margin-left: 10px;
   margin-bottom: 5px
 }
+
+
+.notes_text {
+  height: 88px;
+  width: 950px;
+}
+
+.hidden_notes{
+  display: none;
+}
+
+text-area{
+  
+}
+
+
+
+
+
+

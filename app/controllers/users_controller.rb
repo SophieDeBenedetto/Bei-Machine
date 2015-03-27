@@ -21,7 +21,6 @@ class UsersController < ApplicationController
       login(@user)
       flash[:notice] = "Thank you for signing up!"
       redirect_to search_path
-      # , :notice => "Thank you for signing up!"
     else
       render :new
     end
