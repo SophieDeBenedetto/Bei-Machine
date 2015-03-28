@@ -9,11 +9,11 @@ class BeesController < ApplicationController
 
   def create
     @findings = BeeScraper.new
-    results = @findings.html(search).collect do |found_html|
+    results = @findings.html(search_params).collect do |found_html|
       Bee.find_or_create_by(link: found_html, user_id: current_user.id)
     end
 
-    @findings.found_item(bee_params).each_with_index do |found, i|
+    @findings.found_item(search_params).each_with_index do |found, i|
       results[i].result_item= found
       results[i].keyword = Keyword.create(keyword_terms: params[:bee][:terms])
       results[i].save
