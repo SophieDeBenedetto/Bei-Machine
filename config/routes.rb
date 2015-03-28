@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'sessions#new'
-  get '/search' => 'welcome#index'
+  root 'welcome#index'
+  get '/search' => 'bees#new'
   resources :bees
+
   resources :users, :except => ["new"]
   get '/signup' => 'users#new', :as => 'signup'
 

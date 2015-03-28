@@ -1,2 +1,6 @@
 <h2>Welcome to Bei Machine</h2>
+<% if current_user%>
 <h5><%= link_to 'search', new_bee_path%></h5>
+<%else%>
+<h5><%= link_to "Log in to search", login_path%></h5>
+<%end%>

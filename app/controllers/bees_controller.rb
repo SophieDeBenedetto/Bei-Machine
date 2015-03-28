@@ -33,6 +33,10 @@ class BeesController < ApplicationController
   end
 
   def destroy
+    # binding.pry
+    @bee = Bee.find(params[:id])
+    @bee.destroy
+    redirect_to myresults_path
   end
 
   private

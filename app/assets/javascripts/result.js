@@ -1,6 +1,7 @@
 $(function(){
   moreListener();
   submitNotesListener();
+  deleteResultListener();
 });
 
 function moreListener(){
@@ -20,7 +21,6 @@ function submitNotesListener(){
 
 function submitNotesHandler(e){
   e.preventDefault();
-  // debugger;
   e.stopPropagation();
   var num = $(this).attr("action").slice(6);
   var url = $(this).attr("action");
@@ -31,11 +31,35 @@ function submitNotesHandler(e){
     method: method,
     data: data,
     complete: function(response, id){
-      debugger;
+      // debugger;
       $("#notes-"+num).fadeToggle("slow");
       
 
     } 
   });
 }
+
+function deleteResultListener(){
+   $("table").on("click", ".delete-btn", deleteResult);
+}
+
+function deleteResult(e){
+  var ID = $(this).attr("id").slice(7);
+  $("#"+ID).fadeOut(250);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

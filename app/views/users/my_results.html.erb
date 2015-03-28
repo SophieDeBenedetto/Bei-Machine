@@ -13,12 +13,12 @@
   </thead>
   <tbody>
   <% @results.each do |result|  %>
-    <tr class="success">
+    <tr class="success" id="<%=result.id%>">
       <td><%=result.created_at.to_date%></td>
       <td><a href="<%= result.link %>"><%= result.result_item %></a></td>
       <td><%= result.keyword.keyword_terms%></td>
       <td><button class="btn btn-info btn-xs notes-btn"id="btn-<%=result.id%>">notes</button></td>
-      <td><button class="btn btn-info btn-xs">delete</button></td>
+      <td><%= link_to 'Delete', [result], remote: true, method: :delete, class: "btn btn-info btn-xs delete-btn", id: "delete-#{result.id}"%></td>
     </tr>
     <tr>
       <td colspan="5"  id="notes-<%=result.id%>" class="hidden_notes">
