@@ -28,7 +28,17 @@ class UsersController < ApplicationController
 
   def my_results
     @results = Bee.where(user_id: current_user.id)  
+    respond_to do |format|
+      format.html
+      format.csv {render text: @results.to_csv}
+    end
+
   end
+
+  def results_table
+    @results = Bee.where(user_id: current_user.id)
+  end
+
   private
     def set_user
       @user = User.find(params[:id])

@@ -22,6 +22,7 @@ class BeesController < ApplicationController
     redirect_to myresults_path
   end
 
+
   def update
     @bee = Bee.find(params[:id])
     @bee.notes = params[:bee][:notes]
