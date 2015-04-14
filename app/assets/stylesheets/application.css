@@ -53,6 +53,23 @@ text-area{
   
 }
 
+.footer {
+  width:100%;
+  position:absolute;
+  bottom:0;
+  padding-bottom: .75em;
+}
+
+.footer li {
+  display: inline-block;
+  padding: 0 .75em 0 .75em;
+}
+
+.footer li a {
+  text-decoration: none;
+  color: (0, 140, 186);
+}
+
 
 
 
