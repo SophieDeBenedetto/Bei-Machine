@@ -1,2 +1,1 @@
-<a href="https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine"><img src="https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine/badges/gpa.svg" /></a>
-[![Code Climate](https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine/badges/gpa.svg)](https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine)
+{<img src="https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine/badges/gpa.svg" />}[https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine]
