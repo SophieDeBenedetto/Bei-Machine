@@ -1,3 +1,7 @@
 {<img src="https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine/badges/gpa.svg" />}[https://codeclimate.com/github/SophieDeBenedetto/Bei-Machine]
 
-<h1>What is Bei Machine?</h1>
+Bei Machine is a rails app that allows you to create an account and start saving and managing your google search results. 
+
+It utilizes Ruby's CSV library to allows users to export their search result table data in an excel-friendly format. 
+
+On the front end, it utilizes ajax to enhance the user's experience of adding notes to search results and deleting search results. 
